@@ -10,7 +10,7 @@ const checkToken = !! localStorage.getItem("goaltoken");
 // the path we dont want just anyone to see
 if(location.pathname == "/profile.html") {
 
-    // if there's jo token, redirect the user to login
+    // if there's no token, redirect the user to loging
     if(!checkToken) {
     location.replace('/login.html');
     }
