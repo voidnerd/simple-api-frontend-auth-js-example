@@ -3,12 +3,17 @@ function _(str) {
     return document.querySelector(str);
 }
 
+
+// check if there is a token
 const checkToken = !! localStorage.getItem("goaltoken");
 
+// the path we dont want just anyone to see
 if(location.pathname == "/profile.html") {
+
+    // if there's jo token, redirect the user to login
     if(!checkToken) {
     location.replace('/login.html');
-}
+    }
 
 }
 
@@ -52,6 +57,7 @@ if(regForm) {
 }
 
 
+// Login User
 const loginForm = _("#loginForm");
 
 if(loginForm) {
@@ -91,6 +97,8 @@ if(loginForm) {
 
 
 
+
+// View Users Profile
 const profile = _("#profile");
 
 if(profile) {
